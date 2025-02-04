@@ -1,0 +1,107 @@
+/* Importando una fuente personalizada de Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap");
+
+
+* {
+    margin: 0;
+    padding: 0;
+
+
+}
+
+body{
+  background :linear-gradient(to right, #2e506c 0%, #3286c2 100%)
+
+
+
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  /*NO TOCAR*/
+}
+
+
+.card {
+  box-shadow:3px 3px 10px #000000;
+
+  border-radius: 1cm;
+  width: 1024px;
+  height: 600px;
+  background: linear-gradient(to right, #db2094 0%, #16e3ef 100%)
+  }
+  
+  .card-background {
+    position:relative;
+
+    
+  }
+  
+  .card-content {
+    position: relative;
+    margin-top: 60px;
+   color: white;
+   text-align: center;
+   font-size: 40px;
+   font-family: Arial, Helvetica, sans-serif;
+  
+  }
+  
+  .name {
+    text-shadow:1px 1px 80px rgb(0, 0, 0);
+  }
+  
+  .description {
+    
+    position: relative;
+    margin-top: 35px;
+    font-size:50px ;
+    margin-bottom: 80px;
+  }
+  
+  .contact-btn {
+    padding: 25px 40px;
+    border-radius: 1cm;
+    color: white;
+    border: 2px solid white;
+    position: relative;
+    background: rgba(255, 255, 255, 0.304);
+    text-decoration: none;
+    font-weight:bold;
+    box-shadow:2px 2px 30px #2e506c;
+
+
+  
+   
+  }
+  
+  .contact-btn:hover {
+   background-color: #ffffff70;
+  }
+  
+  
+
+.floating-element {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, #ffeb3b, #ff5722);
+  border-radius: 50%;
+  opacity: 0.8;
+  z-index: 10;
+  margin: 10px;
+  animation: move 3s infinite alternate;
+}
+
+@keyframes move {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(20px);
+  }
+}
