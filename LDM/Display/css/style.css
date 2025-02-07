@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e6f0f3;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #0073e6;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #444;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.seccion {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 700px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    text-align: center;
+}
+.seccion h2{
+    text-decoration: 2px rgb(104, 210, 252) underline;
+
+}
+
+.block {
+    display: block;
+    background-color: #ff9999;
+    padding: 12px;
+    margin: 8px auto;
+    width: 60%;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+}
+
+.inline {
+    display: inline;
+    background-color: #66cc66;
+    padding: 8px 12px;
+    margin: 5px;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+}
+
+.inline-container, .inline-block-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.inline-block {
+    display: inline-block;
+    background-color: #66a3ff;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    min-width: 80px;
+}
+
+.padre {
+    background-color: #a366c689;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    border :2px solid purple;
+    justify-content: center;
+    align-items: center;
+}
+
+.inherit {
+    display: inherit;
+    background-color: #962fa8;
+    margin: 5px auto;
+    width: 70%;
+    border: 2px solid rgb(109, 0, 119);
+    padding: 20px;
+    border-radius: 6px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    text-align: center;
+}
+
+.none {
+    display: none;
+}
+
+footer {
+    background-color: #e5e5f8;
+    font-size: 14px;
+    padding:20px;
+    margin-top: 30px;
+    font-weight: bold;
+    color: #000000b7;
+}
