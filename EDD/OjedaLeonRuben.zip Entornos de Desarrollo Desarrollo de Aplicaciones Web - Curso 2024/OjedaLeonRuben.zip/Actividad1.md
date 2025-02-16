@@ -5,9 +5,6 @@ classDiagram
         + nombre_vendedor
         + codigo_vendedor
         + direccion_vendedor
-        + id_empresa
-        + codigo_vendedores_a_cargo
-
         + todoGetters(): String
     }
       class Empresa{
@@ -16,7 +13,6 @@ classDiagram
         + fecha_entrada
         + facturacion_anual
         + num_vendedores
-        + id_area
         + todoGetters(): String
     }
     class Area{
@@ -32,24 +28,33 @@ classDiagram
         + capital
         + todoGetters(): String
     }
+    class Asesoria{
+        + id_asesoria
+        + id_asesor
+        + id_empresa
+        + id_area
+        + fecha_comienzo
+    }
     class Asesor{
         + codigo_asesor
         + nombre 
         + direccion
         + titulacion
-        + id_empresa
         + fecha_comienzo
-        + id_area
 
         + todoGetters(): String
     }
    
 
 
-    Empresa <|-- Vendedor
-    Vendedor <|-- Vendedor
-    Area <|-- Empresa
-    Area <|-- Asesor
-    Pais <|-- Empresa
+    Empresa "N" -- "N" Area : cubre
+    Empresa "N" -- "N" Pais : opera_en
+    Empresa "N" -- "1" Pais : tiene_sede
+    Vendedor "1" -- "N" Vendedor : capta
+    Empresa "1" -- "N" Vendedor : pertenece
+    Asesoria "N" -- "1" Asesor : pertenece
+    Asesoria "N" -- "1" Empresa : pertenece
+    Asesoria "N" -- "1" Area : pertenece
+
  
 ```
