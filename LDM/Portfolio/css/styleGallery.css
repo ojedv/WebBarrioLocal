@@ -1,4 +1,7 @@
-/* Estilos generales */
+*{
+    letter-spacing: 2px;
+
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -13,31 +16,38 @@ body {
     padding: 20px;
 }
 
-/* Estilos del header */
 header {
     background-color: #6f0000;
-    color: #fff;
     padding: 20px 0;
     text-align: center;
+    text-decoration: none;
+
+}
+header .container p{
+    color:white;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5em;
+
+}
+header a {
+    margin: 0;
+    color: #fff;
+    font-size: 2em;
 }
 
 header p {
     font-size: 1.2em;
 }
 
-/* Estilos de la sección de proyectos */
 #proyectos {
     padding: 40px 0;
 }
 
 #proyectos h2 {
     text-align: center;
-    font-size: 2em;
+    font-size: 2.5em;
     margin-bottom: 20px;
     
 }
@@ -52,16 +62,21 @@ header p {
 
 .proyecto h3 {
     margin-top: 0;
-    font-size: 1.5em;
+    font-size: 2em;
 }
 
 .proyecto p {
-    font-size: 1em;
+    font-size: 1.5em;
     line-height: 1.6;
+}
+img{
+    width: 200px;
+    height: auto;
 }
 
 .proyecto a {
     display: inline-block;
+    font-size: 1.5em;
     margin-top: 10px;
     padding: 10px 15px;
     background-color: #6f0000;
@@ -74,18 +89,18 @@ header p {
     background-color: #a70000;
 }
 
-/* Estilos del footer */
 footer {
     background-color: #6f0000;
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    position: fixed;
+
     width: 100%;
     bottom: 0;
 }
 
 footer p {
     margin: 0;
+    margin-top: 20px;
     font-size: 0.9em;
 }

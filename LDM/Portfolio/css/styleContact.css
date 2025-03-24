@@ -14,7 +14,11 @@ header{
     color:white;
     border-radius:20px
 }
-
+header a {
+    margin: 0;
+    color: #fff;
+    font-size: 1em;
+}
 form {
     background: #ff8d8d;
     padding: 20px;
