@@ -9,6 +9,8 @@ Crear un programa que pregunte si va el usuario va
  posibles). 🍝🥗🥙🍣
  */
 
+ "use strict"
+
  let plato1 = "Arroz con pollo";
  let plato2 = "Pizza vegetariana";
  let plato3 = "Pizza carbonara";
@@ -19,13 +21,13 @@ let vegetarian = false;
 
 let respuesta1 = prompt("Vas a comer o a cenar?")
 let respuesta2 = prompt("Eres vegano/a?")
-respuesta1 = respuesta1.toLowerCase;
-respuesta2 = respuesta2.toLowerCase;
+respuesta1 = respuesta1.toLowerCase();
+respuesta2 = respuesta2.toLowerCase();
 
 
 function checkLunch(par1,par2){
-    par1.contains("comer")?almuerzo = true: almuerzo = false;
-    par2.contains("si")?vegetarian = true: vegetarian = false;
+    par1.includes("comer")?almuerzo = true: almuerzo = false; //El metodo contains en JS es includes.
+    par2.includes("si")?vegetarian = true: vegetarian = false;
 }
 checkLunch(respuesta1,respuesta2);
 
