@@ -19,25 +19,24 @@ let numIngredientes = prompt("¿Cuántos ingredientes tienes? (2-5)","5");
 if (numIngredientes < 2 || numIngredientes > 5) {
     alert("Número de ingredientes no válido. Debe ser entre 2 y 5.");
 } else {
-    let recetas = [];
 
     if (numIngredientes >= 2) {
-        recetas.push("Huevos revueltos con queso (" + ingredientes[0] + " + " + ingredientes[2] + ")");
-        recetas.push("Pan con bacon crujiente (" + ingredientes[3] + " + " + ingredientes[4] + ")");
+        alert("Huevos revueltos con queso --> " + ingredientes[0] + " + " + ingredientes[2] +   
+        "\n Pan con bacon crujiente --> " + ingredientes[3] + " + " + ingredientes[4] );
     }
     if (numIngredientes >= 3) {
-        recetas.push("Sandwich de pan, queso y bacon (" + ingredientes[3] + " + " + ingredientes[2] + " + " + ingredientes[4] + ")");
-        recetas.push("Tortilla rápida con patatas y queso (" + ingredientes[0] + " + " + ingredientes[1] + " + " + ingredientes[2] + ")");
+        alert("Sandwich de pan, queso y bacon --> " + ingredientes[3] + " + " + ingredientes[2] + " + " + ingredientes[4] + 
+        "\n Tortilla rápida con patatas y queso --> " + ingredientes[0] + " + " + ingredientes[1] + " + " + ingredientes[2] );
     }
     if (numIngredientes >= 4) {
-        recetas.push("Desayuno energético (" + ingredientes[3] + " + " + ingredientes[0] + " + " + ingredientes[4] + " + " + ingredientes[2] + ")");
-        recetas.push("Tortilla completa con bacon (" + ingredientes[0] + " + " + ingredientes[1] + " + " + ingredientes[2] + " + " + ingredientes[4] + ")");
+        alert("Desayuno energético --> " + ingredientes[3] + " + " + ingredientes[0] + " + " + ingredientes[4] + " + " + ingredientes[2] +  
+        "\n Tortilla completa con bacon --> " + ingredientes[0] + " + " + ingredientes[1] + " + " + ingredientes[2] + " + " + ingredientes[4] );
+        
     }
     if (numIngredientes == 5) {
-        recetas.push("Mega tortilla brunch con todo (" + ingredientes[0] + " + " + ingredientes[1] + " + " + ingredientes[2] + " + " + ingredientes[4] + " + " + ingredientes[3] + ")");
+        alert("Mega tortilla brunch con todo --> " + ingredientes[0] + " + " + ingredientes[1] + " + " + ingredientes[2] + " + " + ingredientes[4] + " + " + ingredientes[3] );
     }
 
-    alert("Puedes hacer:\n" + recetas.join("\n"));
 }
     
 
