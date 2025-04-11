@@ -16,15 +16,16 @@ Los números mayor a 9 se restan por 9.  8 0 2 2 7 8 7 8 7 8 7 8 2 8 7 1
 Se suman todos los números. 90
 
 Si el resto de dividirlo por 10 es 0, el número es válido. ✅*/
+
 "use strict"
 
 let numTarjeta = prompt("Introduce el número de tarjeta (sin guiones):","4012888888881881");
 let suma = 0;
-let tarjetArray = [];
+let tarjetArray = []; // Array para almacenar los dígitos de la tarjeta
 
-luhn(numTarjeta);
+luhn(numTarjeta); // Llama a la función luhn con el número de tarjeta ingresado por el usuario
 
-function luhn(num) {
+function luhn(num) {  // Función para verificar la validez del número de tarjeta usando el algoritmo de Luhn
     
     tarjetArray = num.split("");
     tarjetArray = tarjetArray.reverse();
@@ -39,7 +40,7 @@ function luhn(num) {
         }
         suma = suma + tarjetArray[i];       
     }
-    if (suma % 10 === 0) {
+    if (suma % 10 === 0) { // Si la suma es divisible por 10, el número es válido
         alert("Tarjeta válida");
     }
     else {

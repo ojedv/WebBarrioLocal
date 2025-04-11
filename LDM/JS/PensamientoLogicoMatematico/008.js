@@ -17,7 +17,7 @@ let randomNum = Math.random(); // Variable para almacenar el número aleatorio
 let resultado = "";
 let contador = 0; // Contador de aciertos
 
-randomNum < 0.5 ? resultado = "🪙" : resultado = "✖️";
+randomNum < 0.5 ? resultado = "🪙" : resultado = "✖️"; // Random de cara o cruz
 
 eleccion = prompt("Elige cara (🪙) o cruz (✖️) o salir (🚪)", "cara").toLowerCase(); // Variable para almacenar la elección del usuario
 
@@ -26,8 +26,8 @@ eleccion === resultado? alert("¡Acertaste! " + resultado) && contador++: elecci
 
 }while(eleccion != "salir" && eleccion != "🚪"); // Mientras la elección no sea salir
 
-function convertResult(eleccion){
-    if(eleccion.includes("cara")){
+function convertResult(eleccion){ // Un poco de depuracion por si el usuario escribe cara o cruz en vez de los emojis
+    if(eleccion.includes("cara")){ 
         return "🪙"
     }
     if(eleccion.includes("cruz")){

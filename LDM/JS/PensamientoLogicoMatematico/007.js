@@ -24,7 +24,7 @@ if (!valido(num)) {
 
 alert(tipoTarjeta);
 
-function valido(num) {
+function valido(num) { // Validar el número de tarjeta usando el algoritmo de Luhn
     let tarjetArray = num.split("").reverse();
     let suma = 0;
 
@@ -41,5 +41,5 @@ function valido(num) {
         suma += digito;
     }
 
-    return suma % 10 === 0;
+    return suma % 10 === 0; // Si la suma es divisible por 10, el número es válido
 }

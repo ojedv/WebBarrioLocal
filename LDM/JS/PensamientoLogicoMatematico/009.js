@@ -11,7 +11,7 @@ se llega a esa cantidad de rondas sin errarle a la secuencia.*/
 
 "use strict"
 
-let colors = ["🔴", "🔵", "🟢", "🟡"]; // Colores posibles
+let colors = ["🔴", "🔵", "🟢", "🟡"]; // Colores 
 
 let secuencia = []; // Secuencia de colores
 let round = 0; // Ronda actual
@@ -28,7 +28,7 @@ do {
         alert("¡Fallaste! Fin del juego.");
     }
 
-    round++; // Incrementar ronda
+    round++; // Incrementa ronda
 
 } while (!fallo);
 

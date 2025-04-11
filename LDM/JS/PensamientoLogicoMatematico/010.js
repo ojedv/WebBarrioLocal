@@ -1,3 +1,7 @@
+//Para estructurar este ejercicio me he ayudado de boli y lápiz, 
+// una vez tenia todas las clases lo pase a código, y con las 
+// clases y metodos creados, lo demas casi que se hacia solo. 
+
 class Monster {
     constructor(name) {
         this.name = name;
@@ -5,11 +9,11 @@ class Monster {
         this.maxAttack = 90;
     }
 
-    attack() {
+    attack() { // Devolvemos un numero en este caso aleatorio entre 1 y el maximo de ataque del monster
         return Math.floor(Math.random() * this.maxAttack) + 1;
     }
 
-    restarVida(damage) {
+    restarVida(damage) { // Este metodo lo creamos para poder llamarlo dentro de otro metodo llamando al monster que sea
         this.life -= damage;
     }
 }
@@ -23,17 +27,17 @@ class Player {
         this.maxPotionHealth = 70;
     }
 
-    attack(monster) {
+    attack(monster) { // Aqui paso el parametro monster porque en mi cabeza tiene logica que si atacas es a algo/alguien, por eso tambien creo el metodo restar vida en monster, para poder hacerlo desde el mismo metodo
         let num = Math.floor(Math.random() * this.maxAttack) + 1;
         monster.restarVida(num);
         alert(`${this.name} ataca al monstruo y le hace ${num} de daño.`);
     }
 
-    restarVida(damage) {
+    restarVida(damage) { // Al igual que el de monster este metodo es por si lo llamamos desde fuera
         this.life -= damage;
     }
 
-    searchPotion() {
+    searchPotion() { // Metodo que da un random del 1-4 si es 1 pues te añade una pocion, si no pues no pasa nada
         let num = Math.floor(Math.random() * 4) + 1;
         if (num === 1) {
             this.potionsAmt++;
@@ -43,7 +47,7 @@ class Player {
         }
     }
 
-    usePotion() {
+    usePotion() { // Metodo que resta una pocion y suma vida, si no tienes pociones pues no hace nada
         if (this.potionsAmt > 0) {
             let num = Math.floor(Math.random() * this.maxPotionHealth) + 1;
             this.life += num;
@@ -54,7 +58,7 @@ class Player {
         }
     }
 
-    getStatus() {
+    getStatus() { // Metodo que devuelve el estado del jugador, seria realmente como un toString
         return `❤️ Vida: ${this.life} | 🧪 Pociones: ${this.potionsAmt}`;
     }
 }
@@ -67,7 +71,7 @@ alert(`Hola ${player.name}! Te enfrentas a ${monster.name} 👾`);
 
 let jugando = true;
 
-while (jugando && player.life > 0 && monster.life > 0) {
+while (jugando && player.life > 0 && monster.life > 0) { // Mientras el jugador y el monstruo tengan vida
     let status = `📊 Estado:\n${player.name} - ${player.getStatus()}\n${monster.name} - 💜 Vida: ${monster.life}`;
     let accion = prompt(`${status}\n\n¿Qué quieres hacer?\n1. Atacar monstruo - ⚔️\n2. Tomar poción - 🧪\n3. Buscar poción - 🔍\n4. Salir - 🚪`);
 
