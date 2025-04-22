@@ -53,7 +53,7 @@ let varitaLiteral = {nombre:"sauco", poder:"hielo", nivel:3};
 // B:
 function crearPocion(nombre, efecto, cantidad){
     let pocion = new Object(); // Creamos un objeto vacio para luego meterle las propiedades.
-    pocion.nombre = nombre; // Le asignamos las propiedades al objeto.  
+    pocion.name = nombre; // Le asignamos las propiedades al objeto.  
     pocion.efecto = efecto;
     pocion.cantidad = cantidad;
 
@@ -87,3 +87,66 @@ class Reliquia {
     }
 }
 let tesoro = new Reliquia("CofreOro","Romano",4);
+/*
+PARA CASA, junto con todo hecho decentemente, si te da tiempo en examen hazlo después de entregar y avisar a tu profesora:
+e) Crea un prototipo base let baseMagica = { activar() { return \Activando ${this.nombre}...; } }.
+
+Usa Object.create(baseMagica) para generar un objeto amuleto al que le asignes luego con “dot notation” las propiedades nombre y poder.
+
+Llama a amuleto.activar() y comprueba que funciona.
+*/
+let baseMagica = {
+    activar() {
+      return `Activando ${this.nombre}...`;
+    }
+  };
+  
+  let amuleto = Object.create(baseMagica);  // Creas amuleto con baseMagica como prototipo.
+  amuleto.name = "Amuleto de la suerte";  // Asignas las propiedades.
+  amuleto.poder = "suerte";
+  
+  console.log(amuleto.activar()); 
+
+/*
+f) Colección y análisis
+Junta todos los objetos anteriores en un array bestiario = […].
+
+Usa un Map para construir un mapeo de nombre → objeto (clave: nombre de cada objeto).
+
+Usa un Set para obtener la lista de todos los “niveles” o “rareza” (la propiedad numérica o de texto que indique fuerza/rango) únicos de tu bestiario.
+
+Finalmente, muestra por consola:
+
+Nombre de cada objeto y su tipo de creación (literal, fábrica, constructor, …).
+
+El tamaño del Set (cuántos niveles/rareza distintos hay).
+
+*/
+let bestiario = [varitaLiteral, p1, p2, tesoro];
+
+// Creamos un Map donde la clave será el nombre y el valor el objeto
+let mapaBestiario = new Map();
+bestiario.forEach(objeto => {
+  let nombre = objeto.name ;
+  mapaBestiario.set(nombre, objeto);
+});
+
+// Creamos un Set para guardar los niveles o rarezas únicas
+let nivelesUnicos = new Set();
+bestiario.forEach(objeto => {
+  if (objeto.nivel) nivelesUnicos.add(objeto.nivel);
+  if (objeto.rare) nivelesUnicos.add(objeto.rare);
+  if (objeto.magLvl) nivelesUnicos.add(objeto.magLvl);
+});
+
+// Mostramos los objetos y su tipo de creación
+console.log("Objetos del bestiario:");
+bestiario.forEach(objeto => {
+  console.log(`Nombre: ${nombre}, Tipo: ${objeto.constructor.name}`);
+});
+
+// Mostramos info del Set
+console.log(`Cantidad de niveles/rareza distintos: ${nivelesUnicos.size}`);
+console.log(nivelesUnicos.size); // Muestra el tamaño del Set
+
+
