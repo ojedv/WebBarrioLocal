@@ -1,0 +1,22 @@
+:root {
+    --bs-gray: #6c757d;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-white: #ffffff;
+    --bs-black: #000000;
+    --bs-body-color: #212529;
+    --bs-body-bg: #ffffff;
+    --bs-border-color: rgba(0, 0, 0, 0.125);
+}
+
+.bg-gray {
+    background-color: var(--bs-gray) !important;
+}
+.bg-dark {
+    background-color: var(--bs-dark) !important;
+}
