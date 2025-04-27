@@ -146,7 +146,7 @@ bestiario.forEach(objeto => {
 });
 
 // Mostramos info del Set
-console.log(`Cantidad de niveles/rareza distintos: ${nivelesUnicos.size}`);
+console.log(`Cantidad de niveles/rareza distintos: ${nivelesUnicos.si   ze}`);
 console.log(nivelesUnicos.size); // Muestra el tamaño del Set
 
 
