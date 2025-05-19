@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registro de Usuario</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css"></head>
+<body>
+  <div class="container mt-5">
+    <h3>Registro de Usuario</h3>
+    <form class="row g-3 needs-validation" novalidate>
+      
+      <!-- Nombre completo -->
+      <div class="col-sm-12">
+        <label for="nombre" class="form-label">Nombre completo *</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" required minlength="3">
+        <div class="invalid-feedback">Introduce al menos 3 caracteres.</div>
+      </div>
+
+      <!-- Email -->
+      <div class="col-sm-12">
+        <label for="email" class="form-label">Email *</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+        <div class="invalid-feedback">Introduce un email válido.</div>
+      </div>
+
+      <!-- Contraseña -->
+      <div class="col-sm-12">
+        <label for="pass" class="form-label">Contraseña *</label>
+        <input type="password" class="form-control" id="pass" name="pass" required minlength="8">
+        <div class="invalid-feedback">Mínimo 8 caracteres.</div>
+      </div>
+
+      <!-- Confirmar contraseña -->
+      <div class="col-sm-12">
+        <label for="pass2" class="form-label">Confirmar contraseña *</label>
+        <input type="password" class="form-control" id="pass2" name="pass2" required>
+        <div class="invalid-feedback">Las contraseñas no coinciden.</div>
+      </div>
+
+      <!-- Edad -->
+      <div class="col-sm-12">
+        <label for="edad" class="form-label">Edad *</label>
+        <input type="number" class="form-control" id="edad" name="edad" required min="18" max="120">
+        <div class="invalid-feedback">Debes tener entre 18 y 120 años.</div>
+      </div>
+
+      <!-- Fecha de nacimiento -->
+      <div class="col-sm-12">
+        <label for="nacimiento" class="form-label">Fecha de nacimiento *</label>
+        <input type="date" class="form-control" id="nacimiento" name="nacimiento" required>
+        <div class="invalid-feedback">Introduce tu fecha de nacimiento.</div>
+      </div>
+
+      <!-- Teléfono -->
+      <div class="col-sm-12">
+        <label for="telefono" class="form-label">Teléfono</label>
+        <input type="tel" class="form-control" id="telefono" name="telefono" pattern="[0-9]{9}">
+        <div class="invalid-feedback">Introduce un teléfono de 9 dígitos.</div>
+      </div>
+
+      <!-- Sitio web -->
+      <div class="col-sm-12">
+        <label for="web" class="form-label">Sitio web</label>
+        <input type="url" class="form-control" id="web" name="web">
+        <div class="invalid-feedback">Introduce una URL válida.</div>
+      </div>
+
+      <!-- Color favorito -->
+      <div class="col-sm-12">
+        <label for="color" class="form-label">Color favorito</label>
+        <input type="color" class="form-control form-control-color" id="color" name="color" value="#000000">
+      </div>
+
+      <!-- Género -->
+      <div class="col-sm-12">
+        <label class="form-label d-block">Género *</label>
+        <div>
+          <input type="radio" class="form-check-input" name="genero" id="hombre" value="Hombre" required>
+          <label for="hombre" class="form-check-label">Hombre</label>
+        </div>
+        <div>
+          <input type="radio" class="form-check-input" name="genero" id="mujer" value="Mujer" required>
+          <label for="mujer" class="form-check-label">Mujer</label>
+        </div>
+        <div>
+          <input type="radio" class="form-check-input" name="genero" id="otro" value="Otro" required>
+          <label for="otro" class="form-check-label">Otro</label>
+        </div>
+        <div class="invalid-feedback d-block">Selecciona una opción.</div>
+      </div>
+
+      <!-- Hobbies -->
+      <div class="col-sm-12">
+        <fieldset>
+          <label class="form-label d-block">Hobbies *</label>
+          <div>
+            <input type="checkbox" class="form-check-input hobby" id="lectura" value="Lectura" name="hobbies[]">
+            <label class="form-check-label" for="lectura">Lectura</label>
+          </div>
+          <div>
+            <input type="checkbox" class="form-check-input hobby" id="deporte" value="Deporte" name="hobbies[]">
+            <label class="form-check-label" for="deporte">Deporte</label>
+          </div>
+          <div>
+            <input type="checkbox" class="form-check-input hobby" id="musica" value="Música" name="hobbies[]">
+            <label class="form-check-label" for="musica">Música</label>
+          </div>
+          <div class="invalid-feedback d-block">Marca al menos un hobby.</div>
+        </fieldset>
+      </div>
+
+      <!-- País -->
+      <div class="col-sm-12">
+        <label for="pais" class="form-label">País *</label>
+        <select class="form-select" id="pais" required>
+          <option value="">Selecciona tu país</option>
+          <option value="España">España</option>
+          <option value="México">México</option>
+          <option value="Argentina">Argentina</option>
+          <!-- Más países aquí -->
+        </select>
+        <div class="invalid-feedback">Selecciona un país.</div>
+      </div>
+
+      <!-- Biografía -->
+      <div class="col-sm-12">
+        <label for="bio" class="form-label">Biografía</label>
+        <textarea class="form-control" id="bio" maxlength="500"></textarea>
+      </div>
+
+      <!-- Sueldo aspiracional -->
+      <div class="col-sm-12">
+        <label for="sueldo" class="form-label">Sueldo aspiracional</label>
+        <input type="range" class="form-range" min="1000" max="10000" step="500" id="sueldo" name="sueldo">
+      </div>
+
+      <!-- CV -->
+      <div class="col-sm-12">
+        <label for="cv" class="form-label">CV (PDF) *</label>
+        <input type="file" class="form-control" id="cv" name="cv" accept=".pdf" required>
+        <div class="invalid-feedback">Sube tu CV en formato PDF.</div>
+      </div>
+
+      <!-- Botón de envío -->
+      <div class="col-sm-12">
+        <button class="btn btn-primary" type="submit">Registrarse</button>
+      </div>
+
+    </form>
+  </div>
+
+  <!-- Script de validación de Bootstrap con modificaciones de Olga, no tocar salvo los ids -->
+  <script>
+    (() => {
+      'use strict'
+      const forms = document.querySelectorAll('.needs-validation')
+      Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+          const checkboxes = form.querySelectorAll('.hobby:checked')
+          if (checkboxes.length === 0) {
+            event.preventDefault()
+            event.stopPropagation()
+            form.querySelector('.hobby').closest('fieldset') 
+                .classList.add('is-invalid')
+          }
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+          const pass = form.querySelector('#pass').value
+          const pass2 = form.querySelector('#pass2').value
+          if (pass !== pass2) {
+            event.preventDefault()
+            event.stopPropagation()
+            form.querySelector('#pass2')
+                .classList.add('is-invalid')
+          }
+          form.classList.add('was-validated')
+        }, false)
+      })
+    })()
+  </script>
+</body>
+</html>
